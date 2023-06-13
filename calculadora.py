@@ -4,8 +4,8 @@ from functools import partial
 
 
 class Calculadora:
-    __ventana = None
-    __ipc = 0.0
+    __ventana: None
+    __ipc: None
 
     def __init__(self) -> None:
         self.__ventana = Tk()
