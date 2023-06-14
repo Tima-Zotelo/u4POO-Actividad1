@@ -5,13 +5,13 @@ from functools import partial
 
 class Calculadora:
     __ventana: None
-    __ipc: None
 
     def __init__(self) -> None:
         self.__ventana = Tk()
         self.__ventana.geometry('535x209')
         self.__ventana.title ('Calculadora IPC')
         #self.__ventana.resizable(0,0)  
+        ipc = 0.0
         opts = { 'padx': 5, 'pady': 5 , 'sticky': 'nswe' }
         self.itemLbl = ttk.Label (self.__ventana, text='Item')
         self.cantidadLbl = ttk.Label (self.__ventana, text='Cantidad')
@@ -44,7 +44,7 @@ class Calculadora:
 
         self.botonCalcular = ttk.Button (self.__ventana, text='Calcular IPC', command=self.calcular)
         self.botonSalir = ttk.Button (self.__ventana, text='Salir', command=self.__ventana.destroy)
-        self.ipcLbl = ttk.Label (self.__ventana, text=f'IPC % {self.__ipc}%')
+        self.ipcLbl = ttk.Label (self.__ventana, text=f'IPC % {ipc}%')
         ### Grill ###
 
         # Fila uno
